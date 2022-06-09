@@ -1,0 +1,225 @@
+.allblog{
+    background: #0C1416;
+    display: flex;
+    height: 200vh;
+    width: 100%;
+    flex-direction: column;
+    
+}
+.about-book .container-about-book{
+    
+}
+.allblog .aboutel-title .title2  {
+    margin: 0;
+    font-size: 60px;
+    line-height: 60px;
+ }
+ .allblog .aboutel-title .title3  {
+   font-weight: 400;
+}
+
+.allblog .img-about{
+    
+    
+   
+}
+ .aboutel-title{
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 43vh;
+    width: 100%;  
+}
+
+ .aboutel-title .title2:before  {
+    content: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/decor.svg');
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left:20%;
+    margin:0;
+   transform: translate(-50%, -50%);
+   background: none ;
+   
+
+   
+}
+
+ .aboutel-title .title2:after  {
+    content: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/decor.svg');
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left:80%;
+    
+   transform: translate(-50%, -50%);
+   background: none ;
+   
+}
+
+.allblog-info{
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+.container{
+    width: 85%;
+    margin:0 auto;
+    display: flex;
+}
+
+.allblog-grid{
+    width: 75%;
+}
+
+.allblog-text{
+    width: 25%;
+}
+
+.allblog-grid .grid-elem{
+    margin:20px;
+    margin-top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.allblog-grid .elem-grid{
+ margin: 20px;
+ margin-top: 5px;
+}
+
+
+
+
+  
+
+.allblog .elem-grid .elem-grid-img{
+      width: 420px;
+      height: 300px;
+  }
+ 
+.allblog .elem-grid-img img{
+    margin: 0 !important;
+    object-fit: none;
+    width: 100%;
+    height: 100%;
+}
+.elem-grid .slick-track{
+    
+    height: 100% !important;
+    
+}
+.elem-grid  .slick-list{
+    height: 300px;
+    width: 420px;
+}
+.elem-grid .slick-slide div{
+    height: 100% !important;
+}
+.allblog-text {
+    z-index: 50;
+   
+}
+.allblog-text .el-allblog{
+    margin-left: 20px;
+}
+.allblog-text .el-allblog .title2{
+    font-size:20px ;
+    margin: 0;
+    place-items: start;
+    line-height: 30px;
+}
+.allblog-text .el-allblog .title2::before{
+   background: none;
+   content: none;
+}
+.allblog-text .el-allblog .title2::after{
+    background: none;
+    content: none;
+ }
+
+.allblog-text .el-allblog ul{
+    
+    list-style: none;
+    font-size:20px ;
+}
+.allblog-text .el-allblog .title3{
+    font-weight: inherit;
+    list-style: none;
+    font-size:20px;
+}
+
+.allblog-text .el-allblog ul li{
+    margin-top: 5px;  
+    padding-left: 10px;  
+}
+.allblog-text .el-allblog ul li::before{
+    z-index: 200;   
+    margin-right: 10px;
+    text-align: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    color:#C9AB82;
+    content: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/li.svg');
+}
+.el-allblog .text .title3{
+    line-height: 25px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.el-allblog .row-button input{
+    font-size: 23px;  
+    width: 100%;
+    margin: 0;
+    padding: 13px;
+}
+.el-allblog .row-button{
+    position: relative;
+    height: fit-content;
+}
+.el-allblog .row-button img{
+    top:17% ;    
+    right: 5%;
+    position: absolute;
+}
+.allblog .allblog-text{
+    margin-left: 10px;
+}
+
+.el-allblog .flex-blog{
+  display: flex;
+  flex-direction: column;
+}
+
+.el-allblog .elem-flex-blog{
+    margin: 10px 0;
+    display: flex;
+}
+
+.el-allblog .elem-flex-blog .img-blog{
+    height: 60px;
+    width: 60px;
+    margin-right:10px ;
+}
+.el-allblog .elem-flex-blog .img-blog img{
+   
+    height: 100%;
+}
+
+.el-allblog .elem-flex-blog  .text-blog .title1{
+  font-size: 14px;
+  margin: 0;
+}
+.el-allblog .elem-flex-blog  .text-blog .title2{
+    font-size: 19.5px;
+    color: #ffffff;
+    letter-spacing: 0px;
+}
+
+.el-allblog .elem-flex-blog  .text-blog .title1 span{
+    color:#C9AB82;
+    text-decoration: underline;
+}

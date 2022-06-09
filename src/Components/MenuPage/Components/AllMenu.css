@@ -1,0 +1,109 @@
+ .aboutel-title .title2{
+    font-size: 60px !important;
+    line-height: 60px !important;
+}
+.all-menu{
+    background: #0C1416;
+}
+.all-menu .container{
+    width: 90%;
+}
+.all-menu .aboutel-title .title3{
+    
+    font-weight: 400;
+}
+.all-menu .title3{
+    font-weight: 300 !important;
+}
+.container .menu-info .title3{
+    margin-left: 20px;
+}
+.menu-info{
+    height: fit-content;
+    width: 100%;
+    background: #0C1416;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:40px ;
+}
+.all-menu .container .header-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.all-menu .container .header-menu .buttons .row-button select{
+    padding: 10px 70px 10px 20px;  
+}
+
+.all-menu .container .menu-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.all-menu .container .menu-grid .elem{
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+.all-menu .container .menu-grid .image-grid-menu{
+    width: 30%;
+}
+.all-menu .container .menu-grid .image-grid-menu img{
+    width: 100%;
+}
+.all-menu .container .menu-grid .info-grid-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+}
+.all-menu .container .menu-grid .info-grid-menu .title2{
+    font-size: 26px;
+    line-height: 26px;
+    place-items: start;
+    margin: 0;
+    
+}
+.all-menu .container .menu-grid .info-grid-menu .title3{
+    
+    margin: 0;
+}
+.all-menu .container .menu-grid .info-grid-menu .title2::after{
+    content: none;
+  background: none;
+}
+.all-menu .container .menu-grid .info-grid-menu .title2::before{
+    content: none;
+  background: none;
+}
+.all-menu .container .menu-grid .right{
+   
+}
+.all-menu .btn button{
+    font-weight: 400;
+    font-size: 23px;
+    padding: 10px 20px;
+    margin: 0;
+    
+}
+.all-menu .btn button:hover {
+    cursor: pointer;
+    border-color: #FFF;
+    transition: all 300ms ease;
+}
+.all-menu .btn button::before {
+    content: "";
+    width: none;
+    height: none;
+    border: none;
+    left: 3px;
+    top: 3px;
+    display: block;
+    position: none;
+    z-index: 0;
+    transition:none;
+    box-sizing: none;
+}

@@ -1,0 +1,78 @@
+.footer{
+    background: #0C1416;
+    position: relative;
+    overflow: hidden;
+}
+.container-footer{
+    margin: 0 auto;
+    height: fit-content;
+    width: 80%;
+}
+  .center {
+    display: table;
+    width: 100%;
+    height: 25vh;
+    bottom: 0;
+  }
+  .social{
+    margin:auto auto 0;
+  }
+ .social-test {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30px;
+  }
+ 
+  .social-test .social {
+    padding-left: 0px;
+  }
+  .social-test li {
+    color: #C9AB82;
+    list-style-type: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 1%;
+    border: 1px solid #C9AB82;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    -webkit-transition: ease 0.3s;
+    transition: ease 0.3s;
+  }
+  .social-test li:hover {
+    color: #C9AB82;
+    border: 1px solid #C9AB82;
+  }
+  .social:hover > li {
+    opacity: 0.5;
+  }
+  .social:hover > li:hover {
+    opacity: 1;
+  }
+  .footer .title3{
+      font-weight: 400;
+      font-size: 20px;
+  }
+  .footer .container-footer .title2{
+      position: static;
+    line-height: 22px;
+      text-align: left ;
+      display: grid;
+      place-items: start;
+    font-size: 22px;
+}
+.footer .title2::before{
+    content:none;
+}
+.footer .title2:after{
+    content:none;
+}
+.footer img{
+    position: absolute;
+    left: 5%;
+    bottom:-25%;
+}
+  

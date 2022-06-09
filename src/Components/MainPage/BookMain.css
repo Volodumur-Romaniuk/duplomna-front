@@ -1,0 +1,110 @@
+.bookmain{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    position: relative;
+}
+.background-book{
+    width: 100%;
+    height: 100%;
+}
+.form-book{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.9;
+}
+.form-book-text{
+    width: 50%;
+    height: 100%;
+}
+.form-book-text .title2{
+    margin-top: 50px;
+    line-height: 32px;
+    font-size: 25px;
+}
+.form-book-text .title2::before{
+    left:32%;
+}
+.form-book-text .title2::after{
+    right:32%;
+}
+.form-book-text .title3{
+  margin: 0;
+    text-align: center !important;
+    font-weight: 100;
+    font-size: 25px;
+}
+.row-button{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+.row-button input{
+    margin: 0 20px;
+    width: 50%;
+
+}
+.row-button select{
+    margin: 0;
+}
+
+.row-button input{
+    box-sizing:content-box;
+    width: 50%;
+    background: transparent;
+    font-weight: 300;
+    margin:0 20px;
+    font-size: 26px;
+    padding: 20px 40px;
+    color: #C9AB82;
+    border: 1px solid #C9AB82;
+    
+   
+}
+.row-button input::placeholder{
+    text-align: left;
+    color: #C9AB82;
+}
+.row-button input:active{
+    border: 1px solid #ffffff;
+
+}
+.row-button input:focus{
+    border: 1px solid #ffffff;
+
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    width: 15px;
+    height: 15px;
+    background: blanchedalmond;
+}
+.row-button select{
+    box-sizing:content-box;
+    text-align:left;
+    width: 50%;
+    background: transparent;
+    font-weight: 300;
+    margin:0 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/select.svg');
+    font-size: 26px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 95%;
+    padding: 20px 40px;
+    color: #C9AB82;
+    border: 1px solid #C9AB82;
+   
+}
+
+.css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root{
+    background: #C9AB82; 
+}

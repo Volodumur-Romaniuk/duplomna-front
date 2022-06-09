@@ -1,0 +1,100 @@
+.allpromo{
+    background: #0C1416;
+}
+.allpromo .container{
+    
+    margin: 0 auto;
+    width: 85%;
+    height:220vh;
+    display: flex;
+    flex-direction: column;
+}
+.allpromo .container .element-promo{
+    width: 100%;
+    display: flex;
+
+}
+.all-promo-info{
+    width: 55%;
+}
+.about-book-image{
+    height: 80%;
+    margin-left: 50px;
+    position: relative;
+    width: 40%;
+}
+.about-book-image .img1{
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    bottom:0 ;
+}
+.about-book-image .img2{
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    top:0 ;
+}
+.about-book-image .icon-left{
+    position: absolute;
+    z-index: 10;
+    left:-5%   ;
+    top:13%;
+}
+
+.allpromo .container .element-promo{
+    height: 33%;
+}
+.allpromo .container .element-promo .all-promo-info > .title2{
+ margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+}
+.allpromo .container .element-promo .all-promo-info > .title1{
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #C9AB82;
+    font-size: 25px;
+    line-height: 25px;
+}
+.allpromo .container .element-promo .all-promo-info .price-promo{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+  
+}
+.allpromo .container .element-promo .all-promo-info .price-promo .el-price{
+    margin: 20px auto;
+}
+.allpromo .container .element-promo .all-promo-info .price-promo .title2{
+    margin: 0;
+    place-items: start;
+     font-size: 20px;
+     line-height: 20px;
+   }
+   .allpromo .container .element-promo .all-promo-info .price-promo .title2 span{
+    margin: 0;
+    display: block;
+    place-items: start;
+     font-size: 24px;
+     line-height: 24px;
+   }
+   .allpromo .container .element-promo .all-promo-info .price-promo .title3{
+    margin: 0;
+    margin-top: 15px;
+     font-size: 20px;
+     line-height: 20px;
+   }
+
+   .allpromo .container .element-promo .all-promo-info .price-promo .title2:before{
+   content:none;
+   background: none;
+   }
+
+   .allpromo .container .element-promo .all-promo-info .price-promo .title2:after{
+    content:none;
+    background: none;
+    }
+
+ 

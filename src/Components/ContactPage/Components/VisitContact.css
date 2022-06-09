@@ -1,0 +1,58 @@
+.visitcontact{
+    background: #0C1416;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+.visitcontact .title2::before{
+    left: 15%;
+}
+.visitcontact .container{
+    width: 85%;
+}
+.visitcontact .title2::after{
+    left: 85%;
+}
+.visitcontact .container .visit{
+    width: 100%;
+    display: flex;
+    margin:0 auto;
+    justify-content: space-between;
+}
+.visitcontact .container .visit .mainvisit{
+    width: 55%;
+   
+}
+.visitcontact .container .visit .mainvisit .visit-text{
+    width: 100%;
+    height: 90%;
+    margin:0 auto;
+}.visitcontact .container .visit .mainvisit .visit-text .text-visit .title2{
+    font-size: 60px;
+    line-height: 60px;
+}
+.img-visit-contact{
+
+    margin-top: 60px;
+    width: 40%;
+    height: 90%;
+    position: relative;
+}
+.img-visit-contact .img1{
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+}
+.img-visit-contact .img2{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.img-visit-contact .icon-left{
+    position: absolute;
+    bottom: 30%;
+    z-index: 3;
+    left:-5%;
+}

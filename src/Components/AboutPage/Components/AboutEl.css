@@ -1,0 +1,104 @@
+.allblog{
+    display: flex;
+    flex-direction: column;
+}
+.aboutel{
+    height: 120vh;
+    width: 100%;
+    background: #0C1416;
+    border-bottom: 1px solid #C9AB82;
+}
+.aboutel-title{
+    display: grid;
+    place-items: center;
+     height: 43vh;
+    position: relative;
+    width: 100%;
+   
+}
+.aboutel-title img{
+    margin: 0;
+    object-fit: cover;
+    padding: 0;
+    width: 100%;
+}
+.aboutel-grid{
+    width: 100%;
+    height: 70%;
+}
+.img-about{
+    position: absolute;
+    height: 100%;
+    
+}
+.aboutel-title-text{
+    
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+}
+.aboutel .title2{
+    margin: 0;
+    font-size: 60px !important;
+    line-height: 60px !important;
+ }
+.aboutel .title3  {
+   font-weight: 400;
+}
+
+.aboutel-title{
+    margin: 0;
+    padding: 0;
+}
+
+.aboutel .title2:before  {
+    content: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/decor.svg');
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left:20%;
+    margin:0;
+   transform: translate(-50%, -50%);
+   background: none ;
+   
+
+   
+}
+
+.aboutel .title2:after  {
+    content: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/decor.svg');
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left:80%;
+    
+   transform: translate(-50%, -50%);
+   background: none ;
+   
+
+   
+}
+.aboutel .about-img .icon{
+    position: absolute;
+    bottom: -5%;
+    left:-5%; 
+}
+.aboutel .about-img{
+    position: relative;
+}
+
+.aboutel-grid{
+    width: 90%;
+    margin: 0 auto;
+      
+}
+
+.aboutel .title3{
+    font-weight: 400;
+    text-align: center;
+    z-index: 100;
+}
+.aboutel .icon1{
+    margin: 0 auto;
+    z-index: 100;
+}

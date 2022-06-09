@@ -1,0 +1,89 @@
+.mainmenu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    background: #111D21;
+}
+.mainmenu-grid{
+    display: grid;
+    margin: 0 auto;
+    height: 65%;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 85%;
+}
+.elemgrid{
+    padding: 0 auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.elemgrid .title1{
+    margin-top:80px;
+   color:#C9AB82;
+}
+.elemgrid .title2{
+    margin:0;
+   font-size: 30px;
+}
+.price {
+    margin:50px 0;
+}
+.elemgrid .price .title2{
+   
+    font-size: 20px !important;
+    line-height: 20px;
+}
+.elemgrid .price{
+    text-align: left;
+}
+.elemgrid .price .title3{
+   
+
+    font-size: 20px;
+    line-height: 20px;
+}
+.mainmenu button{
+   
+    margin:150px auto ;
+}
+.mainmenu .btn{
+    align-items: center;
+    margin: 0 auto;
+}
+.price .title2::before{
+    content:none;
+}
+.price .title2::after{
+    content:none;
+}
+
+@media (max-width:426px){
+    .mainmenu-grid{
+        display: grid;
+        margin: 0 auto;
+        height: 65%;
+        grid-template-columns: 1fr;
+        width: 85%;
+    }
+    .mainmenu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        height: fit-content;
+        background: #111D21;
+    }
+    .mainmenu .btn button{
+        margin:0;
+        margin-bottom: 50px;
+    }
+    .elemgrid .title1{
+        margin-top:40px;
+        margin-bottom:20px
+    }
+    .mainmenu .title2{
+        margin:0;
+        line-height: 30px;
+    }
+}

@@ -1,0 +1,260 @@
+.mainreview{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+     background: #111D21;
+     display: flex;
+     flex-direction: column;
+}
+.line-block{
+    margin: 0 auto;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    position: absolute;
+    z-index: 3;
+}
+.elline{
+    
+    border-left: 0.5px solid #182428;
+    height: 100%;
+    width: 25%;
+    
+}
+.elline-right{
+    border-right: 0.5px solid #182428;
+}
+.text-block{
+    width: 100%;
+    height: 50%;
+    
+}
+.pagination-block{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    height: 50%;
+}
+.text-block .title2{
+   
+    z-index: 11;
+    font-size: 60px;
+    margin: 80px 0 20px 0;
+}
+.text-block .title2::before{
+    left: 30%;
+}
+.text-block .title2::after{
+    right: 30%;
+}
+.align-paginate{
+    z-index: 11;
+}
+.imgpaginate{
+    z-index: 11;
+}
+.align-paginate .title2{
+    z-index: 11;
+}
+.text-block .title3{
+    z-index: 11;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 200;
+}
+.imgpaginate{
+    margin: 0 40px 0 140px;
+}
+.paginate{
+    height: 100%;
+    width: 100%;
+
+}
+.text-paginate{
+    margin-left: 40px;
+    z-index: 11;
+}
+.text-paginate .long-text .title1{
+    margin: 15px 0 0 0px;
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+.align-paginate{
+ width: 80%;
+   display: flex;
+    height: 80%;
+}
+.text-paginate{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.long-text .title1{
+    font-size: 26px;
+}
+.short-text .title2{
+  font-size: 20px;
+}
+.short-text .title2::before{
+    content:none;
+  }
+  .short-text .title2::after{
+    content:none;
+  }
+  .short-text .title3{
+    font-size: 20px;
+  }
+
+  
+
+.text-paginate .short-text .title2{
+    place-items: start;
+    margin: 20px 0 10px 0;
+    line-height: 20px;
+    font-size: 20px;
+  }
+
+  .text-paginate .short-text .title3{
+    margin:  0;
+    line-height: 20px;
+    font-size: 20px;
+  }
+
+  .MuiPagination-root{
+    bottom:60%;
+    position: absolute;
+    z-index: 15;
+  margin:15px auto !important; 
+}
+
+  .MuiPagination-root ul li button{
+    background-color: transparent;
+    background: transparent;
+    font-family: 'Josefin Sans', sans-serif;
+      font-size: 25px;
+      color: #C9AB82 ;
+      font-weight: 200;
+  }
+  .MuiPagination-root ul li{
+    background-color: transparent;
+    background: transparent;
+  }
+  .MuiPagination-root ul li:hover{
+    background: transparent;
+    background-color: transparent;
+    color: white ;
+}
+  .MuiPagination-root ul li button:hover{
+    background: transparent;
+    background-color: transparent;
+    color: white ;
+}
+  .MuiPagination-root ul {
+      display: flex;
+      flex-direction: column;
+  }
+
+
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    color:white;
+    background-color: transparent;
+    background: transparent;
+}
+.css-1xr9krm.Mui-selected {
+    color:white;
+    background-color: transparent;
+    background: transparent;
+}
+
+.paginate{
+    position: relative;
+}
+
+.paginate .icon{
+    z-index: 15;
+    position: absolute;
+    left: 8.5%;
+   bottom:43%;
+}/* .MuiPagination-root .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+      color:white;
+      background-color: transparent;
+      background: transparent;
+  }*/
+  /*.MuiPagination-root .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover {
+    color:white;
+    background-color: transparent;
+    background: transparent;
+}*/
+
+@media (max-width:769px){
+    .mainreview{
+        height: 140vh;
+    }
+   
+    .mainreview .text-block .title3{
+        font-size: 25px;
+        margin: 0 auto;
+        width: 85%;
+    }
+    .text-block{
+        height: 40%;
+    }
+    .align-paginate .imgpaginate{
+        margin:0;
+       
+    }
+    .mainreview .icon{
+        display: none;
+    }
+    .text-paginate{
+        margin-left: 0;
+    }
+    .align-paginate{
+        height: fit-content;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    .text-paginate  .long-text .title1{
+        line-height: 40px;
+    }
+}
+
+
+@media (max-width:426px){
+    .mainreview{
+        height: 140vh;
+    }
+   
+    .mainreview .text-block .title3{
+        font-size: 25px;
+        margin: 0 auto;
+        width: 85%;
+    }
+    .text-block{
+        height: 40%;
+    }
+    .align-paginate .imgpaginate{
+        margin:0;
+       
+    }
+    .mainreview .icon{
+        display: none;
+    }
+    .text-paginate{
+        margin-left: 0;
+    }
+    .align-paginate{
+        height: fit-content;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    .text-paginate  .long-text .title1{
+        line-height: 40px;
+    }
+}

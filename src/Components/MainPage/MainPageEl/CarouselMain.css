@@ -1,0 +1,408 @@
+
+.slidermain{
+    overflow: hidden;
+    width: 100%;
+}
+.slidermain img{
+    object-fit: contain;
+  
+    height: 100%;
+}
+.carouselmain .slick-slider{
+    height: 100%;
+    width:  100%;
+}
+.carouselmain .slick-list{
+    height: 100vh;
+}
+  .slick-next {
+    right: 20px;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 30px;
+    height: 60px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/right.svg') !important;
+}
+
+
+ .slick-next:before {
+    content: '';
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+ .slick-prev {
+     z-index: 10;
+     left: 20px !important; 
+     font-size: 0;
+     line-height: 0;
+     position: absolute;
+     top: 50%;
+     display: block;
+     width: 31px;
+     height: 60px;
+     padding: 0;
+     transform: translate(0, -50%);
+     cursor: pointer;
+     color: transparent;
+     border: none;
+     outline: none;
+    background: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/left.svg') !important;
+}
+
+.slick-prev:before {
+    content: '';
+}
+.slick-prev :before {
+    z-index: 10;
+    content: '' !important;
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slider-info{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    position: relative;
+}
+.text-slider{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    top:30px;
+    left:0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+.decor-slider{
+    left:auto;
+    right: auto;
+    height: 30px;
+    margin: 35px 0;
+}
+
+.title1{
+    font-size: 30px;
+    line-height: 26px;
+    letter-spacing: 0.2em;
+    color:#ffffff;
+    margin: 30px 0;
+}
+.title2{
+    width: 100%;
+    position: relative;
+    font-weight: 700;
+   color:#C9AB82;
+    letter-spacing: 0.2em;
+    line-height: 80px;
+    font-size: 80px;
+    display: grid;
+    place-items: center;
+    margin: 30px 0;
+}
+.title2::before{
+    content:'';
+    width: 43px;
+    height: 20px;
+    
+    top: 50%;
+     left:20%;
+     margin-left:0;
+    transform: translate(-50%, -50%);
+    background: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/titleleft.svg');
+    position: absolute;
+    
+}
+.title2::after{
+    content:'';
+    width: 43px;
+    height: 20px;
+    left:80%;
+    margin-right:-40px;
+    background: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/titleright.svg');
+    position: absolute;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.slider-info .title2::before{
+    content:none;
+}
+.slider-info .title2::after{
+    content:none;
+}
+
+.title3{
+    font-weight: 300;
+    margin: 20px 0;
+    font-size: 23px;
+    color:#ffffff;
+}
+
+.btn button {
+    font-weight: 300;
+    margin:50px 25px 25px 40px;
+    font-size: 26px;
+    padding: 20px 40px;
+    color: #C9AB82;
+    border: 1px solid #C9AB82;
+    position: relative;
+    background: transparent;
+}
+.btn button::before   {
+    
+    border: 1px solid #ffffff;
+    transition: all 300ms ease;
+    background: transparent;
+}
+
+.btn button:hover:before {
+    left: -1px;
+    top: -1px;
+    border-color: #FFF;
+    transition: all 300ms ease;
+}
+
+.btn button::before {
+    content: "";
+    width: calc(100% );
+    height: calc(100% );
+    border: 1px solid #C9AB82;
+    left: 3px;
+    top: 3px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    transition: all 300ms ease;
+    box-sizing: unset!important;
+}
+.slick-dots {
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li button:before {
+    content: '•';
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+   content: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/ol.svg');
+    
+    text-align: center;
+    opacity: .25;
+    /* color: black; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+    width: 20px;
+  height: 20px;
+    
+    content: url('https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/ol.svg');
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+   
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    
+}
+/*https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/ol.svg*/
+@media (max-width:769px){
+    .carouselmain .slick-list{
+        height: 55vh;
+    }
+    .slidermain .background-img{
+        height: 55vh;
+       
+    }
+    .slick-track{
+        height: 55vh;   
+    }
+    .carouselmain .text-slider{
+        top: 0;
+        height: fit-content;
+        width: 100%;
+        
+    }
+    .slick-prev{
+        display: none !important;
+    }
+    .slick-next{
+        display: none !important;
+    }
+    .icon-none{
+        display: none !important;
+    }
+    .text-slider .title3{
+        font-size: 18px;  
+    }
+    .text-slider{
+        top:0;
+    }
+    .slider-info .title1{
+        font-size: 18px;
+        margin: 30px 0 0 ;
+        
+    }
+    .slider-info .title2{
+        font-size: 40px;
+        line-height: 40px;
+        margin: 15px 0 0 ;
+        
+    }
+    
+    .slider-buttons{
+       margin: 0;
+    }
+    .slider-buttons button{
+        padding: 10px;
+    }
+}
+
+@media (max-width:769px){
+    .carouselmain .slick-list{
+        height: 55vh;
+    }
+    .slidermain .background-img{
+        height: 55vh;
+       
+    }
+    .slick-track{
+        height: 55vh;   
+    }
+    .carouselmain .text-slider{
+        top: 0;
+        height: fit-content;
+        width: 100%;
+        
+    }
+    .slick-prev{
+        display: none !important;
+    }
+    .slick-next{
+        display: none !important;
+    }
+    .icon-none{
+        display: none !important;
+    }
+    .text-slider .title3{
+        font-size: 18px;  
+    }
+    .text-slider{
+        top:0;
+    }
+    .slider-info .title1{
+        font-size: 18px;
+        margin: 30px 0 0 ;
+        
+    }
+    .slider-info .title2{
+        font-size: 40px;
+        line-height: 40px;
+        margin: 15px 0 0 ;
+        
+    }
+    
+    .slider-buttons{
+       margin: 0;
+    }
+    .slider-buttons button{
+        padding: 10px;
+    }
+}
+
+@media (max-width:426px){
+    .carouselmain .slick-list{
+        height: 30vh;
+    }
+    .slidermain .background-img{
+        height: 30vh;
+       
+    }
+    .slick-track{
+        height: 30vh;   
+    }
+    .carouselmain .text-slider{
+        top: 0;
+        height: fit-content;
+        width: 100%;
+        
+    }
+    .slick-prev{
+        display: none !important;
+    }
+    .slick-next{
+        display: none !important;
+    }
+    .icon-none{
+        display: none !important;
+    }
+    .text-slider .title3{
+        display: none;
+    }
+    .text-slider{
+        top:0;
+    }
+    .slider-info .title1{
+        font-size: 18px;
+        margin: 40px 0 0 ;
+    }
+    .slider-info .title2{
+        font-size: 40px;
+        line-height: 40px;
+        margin: 20px 0 0 ;
+    }
+    
+    .carouselmain  .slider-buttons{
+        display: none;
+    }
+}
