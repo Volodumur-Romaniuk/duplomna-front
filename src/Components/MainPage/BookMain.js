@@ -35,7 +35,7 @@ function BookMain() {
         
         let date =  Date.parse(res)
         console.log(moment(date).format('M/D/YYYY'))
-         axios.post("http://localhost:5000/reservation/insert",{date:moment(date).format('M/D/YYYY')}).then(result =>{
+         axios.post("https://duplomna-backend.herokuapp.com/reservation/insert",{date:moment(date).format('M/D/YYYY')}).then(result =>{
             console.log('work')
             setReservation(result.data)
         })
@@ -51,7 +51,7 @@ function BookMain() {
        
     const saveDate = (e) =>{
         e.preventDefault();
-        axios.post(`http://localhost:5000/reservation/update/${reservation._id}/${buttonId}`,
+        axios.post(`https://duplomna-backend.herokuapp.com/reservation/update/${reservation._id}/${buttonId}`,
         {
             countPerson:countPerson,
             name:name,
@@ -99,7 +99,7 @@ function BookMain() {
                             <input type = "text" onChange={(e)=>setName(e.target.value)}  placeholder="Your Name"  required/> 
                         </div>
                         <div className="row-button   josefin-sans">
-                        <LocalizationProvider dateAdapter ={AdapterDateFns} >
+                        <LocalizationProvider   sx = {{width:"100%"}}  dateAdapter ={AdapterDateFns} >
                             <DatePicker      
                                  required
                                 onAccept ={(date)=>{
@@ -115,31 +115,32 @@ function BookMain() {
                                 showToolbar ={true}
                                 format="yyyy-MM-dd HH:mm:ss"
                             onChange={(date)=>{setDate(date);  console.log(date)}}
-                            renderInput={(params) => <TextField {...params}   />}
+                            sx = {{width:"100%"}} 
+                            renderInput={(params) => <TextField {...params}   sx = {{width:'100%'}}  />}
                                 />
                             </LocalizationProvider>
                           
-                            <input type = "text" onChange={(e)=>setMail(e.target.value)} placeholder="Your Email " required/>
+                            <input type = "email" onChange={(e)=>setMail(e.target.value)} placeholder="Your Email " required/>
                         </div>
-                        <div className="row-button  josefin-sans">
-                            
-                           
-                        </div>
+                        
                     </div>
                
-                            <div className="slider-buttons btn josefin-sans">
-                             
-                                 <button onClick={(e)=>saveDate(e)}  className="josefin-sans"> Submit</button>
-                          </div>
+                          
                           
                     
             </form>
             <div className="form-book-el">
-            <p className="title2 josefin-sans "> TIME</p>
-            {logic ?<RenderButtons buttons = {reservation.objectbutton} onButtonClick={setButtonID} onClicksetPas={setPassword}/>:<></>}
-         </div>
-           
+                <p className="title2 josefin-sans "> TIME</p>
+                    {logic ?<RenderButtons buttons = {reservation.objectbutton} onButtonClick={setButtonID} onClicksetPas={setPassword}/>:<></>}
+             </div>
+            <div className="slider-buttons btn josefin-sans">
+                <button onClick={(e)=>saveDate(e)}  className="josefin-sans"> Submit</button>
+            </div>
         </div>
+             
+
+        
+            
     
     </div>
   );

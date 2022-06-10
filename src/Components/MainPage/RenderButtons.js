@@ -3,7 +3,7 @@ import "./BookMain.css"
 import PopupPassword from './PopupPassword';
 import ReservedPopupPassword from './ReservedPopupPassword';
 function RenderButtons({buttons,onButtonClick,onClicksetPas}) {
-  const [popup,setPopup] = useState(null)
+  const [popup,setPopup] = useState(false)
   const [close,setClose] = useState(true)
   const [butons,setButons] = useState({})
   const [password,setPassword] = useState('');
@@ -41,7 +41,7 @@ function RenderButtons({buttons,onButtonClick,onClicksetPas}) {
        {buttons?.map((element,index)=>
         <>
             <button  onClick ={()=>{
-              setPopup(element.isReserved);
+              setPopup(true)
               onButtonClick(element.id);
               onClicksetPas(password);
               console.log('popup'+popup);
@@ -54,12 +54,11 @@ function RenderButtons({buttons,onButtonClick,onClicksetPas}) {
           )}
      </>
     } 
-    {     popup === true
-          ? <ReservedPopupPassword opens = {popup} onClosePopup ={setPopup} onClicksetPas ={onClicksetPas}/>   
-          : popup ===false ? <PopupPassword opens = {!popup} onClosePopup ={setPopup} onClicksetPas ={onClicksetPas}/> :<></>}
+    {     popup ? <PopupPassword opens = {popup} onClosePopup ={setPopup} onClicksetPas ={onClicksetPas}/> : <></>
+    }
 </div>
   );
 }
 
 export default RenderButtons;
-/*  */
+/* <ReservedPopupPassword opens = {popup} onClosePopup ={setPopup} onClicksetPas ={onClicksetPas}/>   */

@@ -76,3 +76,14 @@
     bottom:-25%;
 }
   
+@media(max-width:426px){
+    .footer img{
+      display: none;
+    }
+    .footer .container-footer{
+      text-align: center !important;
+    }
+    .footer .container-footer .title2{
+      place-items: center;
+    }
+}

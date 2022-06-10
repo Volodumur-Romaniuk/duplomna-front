@@ -9,8 +9,8 @@ function BlogMain() {
             <p className="title2 josefin-sans ">THE BLOG</p>
                          <p className="title3  josefin-sans">
                          Mi sapien facilisis tellus elementum dictumst sed dictumst facilisis tincidunt <br />
-vestibulum elementum congue turpis tortor viverra <br />
-sit sapien tortor velit, massa 
+                         vestibulum elementum congue turpis tortor viverra <br />
+                         sit sapien tortor velit, massa 
                              
                          </p>
 

@@ -1,12 +1,23 @@
 .bookmain{
     width: 100%;
-    height: 70vh;
+    height: 85vh;
     display: flex;
+    flex-direction: column;
     position: relative;
 }
 .background-book{
     width: 100%;
     height: 100%;
+}
+
+.bookmain .slider-buttons{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 20%;
+}
+.bookmain .slider-buttons button{
+    margin: 0 ;
 }
 .form-book{
     position: absolute;
@@ -16,10 +27,17 @@
     width: 100%;
     background: black;
     opacity: 0.9;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 .form-book-text{
     width: 50%;
-    height: 100%;
+    height: 80%;
+}
+.form-book-el{
+    width: 50%;
+    height: 80%;
 }
 .form-book-text .title2{
     margin-top: 50px;
@@ -107,4 +125,44 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 
 .css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root{
     background: #C9AB82; 
+}
+
+@media (max-width:426px){
+    .bookmain{
+        height: 170vh;
+    }
+    .form-book-text{
+        width: 100%;
+        height: 45%;
+    }
+    .form-book-text .title3{
+        margin-bottom: 30px;
+     }
+    .form-book-el{
+        width: 100%;
+        height: 40%;
+    }
+    .bookmain .slider-buttons{
+        height: 10%;
+    }
+    .row-button{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .row-button input{
+        margin:  0 auto 10px !important;
+        height: 35px;
+
+        outline: none;
+    }
+    .row-button select{
+        margin:  0 auto 10px !important;
+        height: 33px;
+    }
+   
+    .form-book-el button{
+        padding: 10px;
+    }
 }

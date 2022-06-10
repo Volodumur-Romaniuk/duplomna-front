@@ -83,4 +83,21 @@
         display: grid;
         grid-template-columns: 1fr ;
     }
+    .blogmain .text-blog{
+        height: fit-content;
+    }
+    .blogmain .text-blog .title2{
+        font-size: 40px;
+    }
+    .blogmain{
+        height: 300vh;
+        width: 100%;
+        background: #0C1416;
+        display: grid;
+        place-items: center;
+    }
+    .blogmain .elem-grid{
+        margin:30px 0;
+    }
+    
 }

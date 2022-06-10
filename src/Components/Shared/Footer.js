@@ -10,7 +10,7 @@ function Footer() {
             <div className="info-footer">
             <p className="title3  josefin-sans">
             France, Marseille, Main street 53, FR-MR 00584 <br />
-onlineorder@cosushi.com | info@cosushi.com           
+            onlineorder@cosushi.com | info@cosushi.com           
             </p>
             <p className="title2 josefin-sans "> Opening hours:</p>
                          <p className="title3  josefin-sans">

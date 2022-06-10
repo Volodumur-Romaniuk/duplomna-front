@@ -103,16 +103,12 @@
     color:black;
   background: #C9AB82; 
 }
-.buttons-time button:focus{
+.buttons-time button:hover{
    
   color:black;
   background: #C9AB82;  
 }
-.buttons-time button:active{
-   
-    color:black;
-    background: #C9AB82;  ;
-  }
+
 
 
 @media (max-width:426px){
@@ -120,16 +116,31 @@
         width: 100%;
         height: 200vh;
         background: #0C1416;
-        display: grid;
-        place-items: center;
+       
     }
-   
+    .promomain .about-grid{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
        .promomain .icon{
            display: none;
        }
        .promomain .btn button{
            margin: 0;
-       }
-   
+       }    
+        .promomain .btn{
+            margin: 40px 0;
+        }
+        .promomain .title2{
+            margin: 20px 0;
+        }
+        .promomain .title1{
+            margin-top:30px;
+        }
+        .promomain .about-bettween{
+          
+        }
    
 }
