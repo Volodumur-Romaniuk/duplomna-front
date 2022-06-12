@@ -67,7 +67,7 @@ function MenuReview() {
                          <div className="imgpaginate">
                          <img src={i.img} alt={i.posada}/>
                          </div>
-                     <div className="text-paginate">
+                         <div className="text-paginate">
                          <div className="long-text">
                          <p className="title1 font-oregano"> {i.longtext}</p>
                          </div>
@@ -76,7 +76,7 @@ function MenuReview() {
                          <p className="title3 josefin-sans ">{i.posada}</p>
                          </div>
                     
-                     </div>
+                      </div>
                      </div>
                      
                  )

@@ -102,3 +102,26 @@
     margin: 0 auto;
     z-index: 100;
 }
+
+@media (max-width:426px){
+    .aboutel{
+        height: 250vh;
+    }
+    .aboutel .aboutel-title{
+        
+    }
+    .aboutel .title2{
+        font-size: 35px;
+    }
+    .aboutel .title2:before{
+        content:'';
+        background: none;
+        display: none;
+    }
+    .aboutel .title2:after{
+        content:'';
+        background: none;
+        display: none;
+    }
+}
+

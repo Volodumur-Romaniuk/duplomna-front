@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 
 import './AllBlog.css';
 import Slider from 'react-slick'
@@ -6,6 +6,19 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Pagination from '@mui/material/Pagination';
 function AllBlog() {
+
+  const [pagincount,setPagincount]= useState();
+    const handleChange = ( event,value) => {
+        setPagincount( value);
+        console.log("gfdgdf");
+      };
+      useEffect(() => {
+        
+          
+          setPagincount(1);
+        },[])
+      ;
+
     const sliderSettings = {
         arrows: true,
         slidesToShow: 1,
@@ -16,28 +29,108 @@ function AllBlog() {
         pauseOnHover:false
       }
     
-      const template = [
+      const obg_paginate = [
+        [
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog8-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
 
-        { 
-         img:"https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/review1.jpg",
-         title1:" December 19, 2021 CRICOVA Sashimi",
-         title2:" PROIN NISL NIBH",
-         title3:"Director"
-        },
-        { 
-            img:"https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/review1.jpg",
-            title1:" December 19, 2021 CRICOVA Sashimi",
-            title2:" PROIN NISL NIBH",
-            title3:"Director"
-           },
-           { 
-            img:"https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/review3.jpg",
-            longtext:"Mus porta laoreet aenean quis faucibus integer. Magna est ultrices vitae cum dui purus libero. Pellentesque orci, ultrices pharetra ac purus. Magna est ultrices vitae cum dui purus libero. Pellentesque orci, ultrices pharetra ac purus. ",
-            shorttext:"ELEN MARLEN",
-            posada:"Chief"
-           }
-        
-    ] 
+          },
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+
+          },
+          { 
+            img:[
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg",
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog5-768x512.jpg",
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg"
+            ],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+          },
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog5-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+
+          }
+
+        ],
+        [ 
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog4-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+
+          },
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog3-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+
+          },
+          { 
+            img:[
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg",
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog5-768x512.jpg",
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg"
+            ],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+          },
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog1-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+
+          }
+        ],
+        [
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog8-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+
+          },
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+
+          },
+          { 
+            img:[
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg",
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog5-768x512.jpg",
+              "https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg"
+            ],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+          },
+          {
+            img:["https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg"],
+            datetext:"December 19, 2021 CRICOVA Sashimi",
+            titletext:"PROIN NISL NIBH",
+            description:"Proin nisl nibh egestas pellentesque viverra elit amet. Netus tellus tortor non eu.  Turpis eu sit metus, id sed id sit a aliquet. …"
+
+          }
+        ]
+      ]
 
   return (
       
@@ -57,79 +150,64 @@ function AllBlog() {
             <div className="allblog-info"  >
                 <div className="container">
                     <div className="allblog-grid">
-                        <div className="grid-elem">
-                             <div className="elem-grid">
-                                 <div className="elem-grid-img">
-                                      <img src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog8-768x512.jpg" alt="" />
-                                 </div>
-                                  <div className="elem-grid-text">
-                                  <p className="title1 font-oregano"> December 19, 2021 CRICOVA Sashimi</p>
-                                 <p className="title2 josefin-sans "> PROIN NISL NIBH</p>
-                                  <p className="title3  josefin-sans">
-                                  Proin nisl nibh egestas pellentesque viverra elit amet. Netus
-                                   tellus tortor non eu. 
-                                  Turpis eu sit metus, id sed id sit a aliquet. …
 
-                                  </p>
+                    
+                   <div className="pagination">
+                      {
+                        obg_paginate.map((i,index)=>(
+                          index>=(pagincount-1)*1 && index<(pagincount)*1 &&
+                          <div className="grid-elem">
+                            { i.map((e,ind)=>(
+                              e.img.length === 1 ?
+                                
+                              
+                                  <div className="elem-grid">
+                                    <div className="elem-grid-img">
+                                      <img src={e.img} alt="" />
                                   </div>
-                             </div>
-                             <div className="elem-grid">
-                                 <div className="elem-grid-img">
-                                      <img src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg" alt="" />
-                                 </div>
                                   <div className="elem-grid-text">
-                                  <p className="title1 font-oregano"> December 19, 2021 CRICOVA Sashimi</p>
-                                 <p className="title2 josefin-sans "> PROIN NISL NIBH</p>
-                                  <p className="title3  josefin-sans">
-                                  Proin nisl nibh egestas pellentesque viverra elit amet. Netus
-                                   tellus tortor non eu. 
-                                  Turpis eu sit metus, id sed id sit a aliquet. …
-
-                                  </p>
+                                    <p className="title1 font-oregano">{e.datetext}</p>
+                                    <p className="title2 josefin-sans "> {e.titletext}</p>
+                                    <p className="title3  josefin-sans">
+                                      Proin nisl nibh egestas pellentesque viverra elit amet. Netus
+                                      tellus tortor non eu. 
+                                      Turpis eu sit metus, id sed id sit a aliquet. …
+                                    </p>
                                   </div>
-                             </div>
+                                </div>:
+                                <div className="elem-grid">
+                                <div className="elem-grid-img">
 
-                             <div className="elem-grid">
-                                 <div className="elem-grid-img">
+                                            <Slider {...sliderSettings}>
 
-                                             <Slider {...sliderSettings}>
-
-                                                 <img src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog9-768x512.jpg" alt="" />
-                                                 <img src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog5-768x512.jpg" alt="" />
-                                                 <img src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog7-768x512.jpg" alt="" />
+                                                <img src={e.img[0]} alt="" />
+                                                <img src={e.img[1]} alt="" />
+                                                <img src={e.img[2]} alt="" />
                                               </Slider> 
 
-                                 </div>
+                                </div>
                                   <div className="elem-grid-text">
                                   <p className="title1 font-oregano"> December 19, 2021 CRICOVA Sashimi</p>
-                                 <p className="title2 josefin-sans "> PROIN NISL NIBH</p>
+                                <p className="title2 josefin-sans "> PROIN NISL NIBH</p>
                                   <p className="title3  josefin-sans">
                                   Proin nisl nibh egestas pellentesque viverra elit amet. Netus
-                                   tellus tortor non eu. 
+                                  tellus tortor non eu. 
                                   Turpis eu sit metus, id sed id sit a aliquet. …
 
                                   </p>
                                   </div>
-                             </div>
-                             <div className="elem-grid">
-                                 <div className="elem-grid-img">
-                                      <img src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/blog5-768x512.jpg" alt="" />
-                                 </div>
-                                  <div className="elem-grid-text">
-                                  <p className="title1 font-oregano"> December 19, 2021 CRICOVA Sashimi</p>
-                                 <p className="title2 josefin-sans "> PROIN NISL NIBH</p>
-                                  <p className="title3  josefin-sans">
-                                  Proin nisl nibh egestas pellentesque viverra elit amet. Netus
-                                   tellus tortor non eu. 
-                                  Turpis eu sit metus, id sed id sit a aliquet. …
-
-                                  </p>
-                                     </div>
-                             </div>
-                        </div>
-                    </div>
-                   
-             
+                            </div>
+                               ))
+                              }
+                               
+                               </div>
+                        ))   
+                        
+                    }
+                   </div>
+                   <Pagination count={Math.ceil(obg_paginate.length/1)} value={pagincount}  onChange={handleChange}/>
+  
+                   </div>
                 <div className="allblog-text">
                     <div className="el-allblog">
                         <p className="title2 josefin-sans">CATEGORIES</p>
@@ -143,13 +221,7 @@ function AllBlog() {
                             <li>Uramaki</li>
                         </ul>
                     </div>
-                    <div className="el-allblog">
-                        <p className="title2 josefin-sans">SEARCH</p>  
-                        <div className="row-button  josefin-sans">
-                            <img src="https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/submit.svg" alt="" />
-                            <input placeholder="Type Here "/>
-                        </div>
-                    </div>
+                    
                     <div className="el-allblog">
                         <p className="title2 josefin-sans"> ABOUT RESTAURANT</p>
                         <div className="text">
@@ -202,12 +274,12 @@ function AllBlog() {
                     </div>
                 </div>
 
-            </div>
+           
 
-            
+           
         </div>
-    
        
+        </div>
     </div>
   );
 }

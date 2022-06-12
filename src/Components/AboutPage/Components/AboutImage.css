@@ -1,9 +1,9 @@
 .about-image{
     width: 100%;
     height: 50vh;
-     border-top:1px solid #C9AB82;
-     border-bottom:1px solid #C9AB82;
-     position: relative;
+    border-top:1px solid #C9AB82;
+    border-bottom:1px solid #C9AB82;
+    position: relative;
 }
 .about-image:hover{
    cursor: pointer;
@@ -20,12 +20,21 @@
     position: absolute;
     z-index: 2;
     top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .about-image .icon-decor{
     position: absolute;
     z-index: 2;
     bottom:0;
     right: 10%;
+}
+
+@media (max-width:426px){
+    .about-image .icon-decor{
+        display: none;
+    }
+    .about-image{
+        height: 30vh;
+    }
 }

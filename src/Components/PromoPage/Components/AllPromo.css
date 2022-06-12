@@ -23,13 +23,13 @@
     position: relative;
     width: 40%;
 }
-.about-book-image .img1{
+.allpromo .about-book-image .img1{
     z-index: 5;
     position: absolute;
     left: 0;
     bottom:0 ;
 }
-.about-book-image .img2{
+.allpromo .about-book-image .img2{
     z-index: 0;
     position: absolute;
     right: 0;
@@ -96,5 +96,51 @@
     content:none;
     background: none;
     }
+@media (max-width:426px){
+    .allpromo .container .element-promo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .allpromo .container{
+    
+        margin: 0 auto;
+        width: 85%;
+        height:380vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .allpromo .container .element-promo .all-promo-info{
+        width: 95%;
+        margin: 0 auto;
+        height: fit-content;
+    }
+    .allpromo .container .element-promo .el-price .title2{
+        font-size: 17px !important;
+    }
+    .allpromo .container .element-promo .about-book-image{
+       
+        height: 50%;
+    }
+    .allpromo .container .element-promo .about-book-image{
+        height: 30%;
+    }
+    .allpromo .container .element-promo .about-book-image img{
+        width: 80%;
+    }
+    .allpromo .container .element-promo .about-book-image2 .img1{
+        top: 0 !important;
+        position: absolute;
+      
+        bottom:none !important;
+    }
+    .allpromo .container .element-promo .about-book-image2 .img2{
+       bottom: 0 !important;
+       top:auto;
+      
+       position: absolute;
+    }
+}
 
  

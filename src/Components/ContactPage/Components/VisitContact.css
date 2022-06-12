@@ -1,7 +1,7 @@
-.visitcontact{
+.visitcontact .container{
     background: #0C1416;
     width: 100%;
-    height: 110vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     margin-bottom: 150px;
@@ -55,4 +55,62 @@
     bottom: 30%;
     z-index: 3;
     left:-5%;
+}
+@media (max-width:426px) {
+    .visitcontact .visit{
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+    }
+    .visitcontact .visit .visit-text{
+        height: fit-content;
+    }
+    .visitcontact .container{
+        height: 140vh;
+    }
+    .visitcontact .container .visit .mainvisit{
+        width: 100%;
+    }
+    .img-visit-contact .img1{
+        width: 80%;
+    }
+    .img-visit-contact .img2{
+        width: 80%;
+    }
+    .visit-text .title2{
+        margin: 20px 0;
+        letter-spacing: 4px;
+        line-height:40px ;
+    }
+    .img-visit-contact .icon-left{
+        display: none;
+    }
+    .img-visit-contact {
+        width: 100%;
+    }
+    .visitcontact .container .visit{
+        height: 100%;
+    }
+    .text-visit .title2{
+        margin: 30px 0;
+        font-size: 40px !important;
+        line-height: 40px !important;
+    }
+    .text-visit .title3{
+        margin: 40px 0;
+    }
+    .formcontact .info-form .elements-form {
+        margin-left: 0 !important; 
+        margin: 0 auto !important;
+    }
+    .date-visit .block-date-visit{
+        display: flex;
+        flex-direction: column;
+    }
+    .date-visit .block-date-visit .title2{
+        place-items: center;
+    }
+    .date-visit .block-date-visit p{
+        text-align: center;
+    }
 }

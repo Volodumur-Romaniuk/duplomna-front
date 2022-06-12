@@ -8,7 +8,7 @@ function AllMenu() {
          <div className="aboutel-title">
             <img className="img-about" src="https://i.ibb.co/Lg8ZRmC/inner4.jpg" alt="" />
             <div className="aboutel-title-text">
-            <p className="title2 josefin-sans ">PROMO</p>
+            <p className="title2 josefin-sans ">MENU</p>
                 <p className="title3  josefin-sans">  
                 Fermentum, parturient libero a tortor. Vitae vestibulum, consectetur orci pulvinar.     <br /> Ipsum ante eu morbi malesuada molestie malesuada et amet.  </p>
             </div>
@@ -16,7 +16,7 @@ function AllMenu() {
             <div className="container">
                 <div className="menu-info">
                     <div className="header-menu">
-                        <p className="title3  josefin-sans">Showing all 10 results</p>
+                        
                         <div className="buttons">
                             <div className="row-button  josefin-sans">
                                 <select> 

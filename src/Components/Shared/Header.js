@@ -1,11 +1,12 @@
 
 import './Header.css';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import React,{useState,useEffect} from "react"
 import {useMedia} from 'react-use-media'
 function Header() {
   const resolution = useMedia('(max-width : 769px)');
   const [classState, setClassState] =useState(false);
+  
   const handleMenuClick =()=>{  
     if(classState){
         setClassState(false);
@@ -19,17 +20,17 @@ function Header() {
          {!resolution ?
           <div className="menu">
              <ul  className=" list_menu josefin-sans">
-              <li> <Link to ="/"> HOME </Link> </li>
+              <li> <NavLink activeClassName="active"  to ="/"> HOME </NavLink> </li>
               <img className="icon-main" src="https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/li.svg" alt="" />
-              <li><Link  to="/about"> ABOUT</Link></li>
+              <li><NavLink activeClassName="active" to="/about" > ABOUT</NavLink></li>
               <img className="icon-main" src="https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/li.svg" alt="" />
-              <li><Link to="/blog"> BLOG</Link></li>
+              <li><NavLink activeClassName="active" to="/blog"> BLOG</NavLink></li>
               <img  className="logo" src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/logo.png" alt="" />
-              <li><Link to="/menu"> MENU</Link></li>
+              <li><NavLink  activeClassName="active" to="/menu"> MENU</NavLink></li>
               <img className="icon-main" src="https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/li.svg" alt="" />
-              <li><Link to="/promo"> PROMO</Link></li>
+              <li><NavLink activeClassName="active" to="/promo"> PROMO</NavLink></li>
               <img className="icon-main" src="https://alethemes.com/alesushi/wp-content/themes/alesushi/assets/svg/li.svg" alt="" />
-               <li><Link  to="/contact"> CONTACT</Link></li>
+               <li><NavLink activeClassName="active" to="/contact"> CONTACT</NavLink></li>
              </ul>
           </div>:<>  <img  className="logo" src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/logo.png" alt="" />
 
@@ -44,14 +45,14 @@ function Header() {
          } 
 
           {classState ? 
-                <div className="dropdown-menu">
+                <div  onClick ={()=>setClassState(false)}  className="dropdown-menu">
                   <ul  className=" list_menu josefin-sans">
-                    <li onClick ={()=>setClassState(false)} > <Link to ="/"> HOME </Link> </li>
-                    <li onClick ={()=>setClassState(false)}><Link  to="/about"> ABOUT</Link></li>
-                    <li onClick ={()=>setClassState(false)}><Link to="/blog"> BLOG</Link></li>
-                    <li onClick ={()=>setClassState(false)}><Link to="/menu"> MENU</Link></li>
-                    <li onClick ={()=>setClassState(false)}><Link to="/promo"> PROMO</Link></li>
-                    <li onClick ={()=>setClassState(false)}><Link  to="/contact"> CONTACT</Link></li>
+                    <li onClick ={()=>setClassState(false)}> <NavLink activeClassName="active" to ="/"> HOME </NavLink> </li>
+                    <li onClick ={()=>setClassState(false)}> <NavLink activeClassName="active" to="/about"> ABOUT</NavLink></li>
+                    <li onClick ={()=>setClassState(false)}> <NavLink activeClassName="active" to="/blog"> BLOG</NavLink></li>
+                    <li onClick ={()=>setClassState(false)}> <NavLink activeClassName="active" to="/menu"> MENU</NavLink></li>
+                    <li onClick ={()=>setClassState(false)}> <NavLink activeClassName="active" to="/promo"> PROMO</NavLink></li>
+                    <li onClick ={()=>setClassState(false)}> <NavLink activeClassName="active" to="/contact"> CONTACT</NavLink></li>
              </ul>
                     </div>  
                 :<></>  

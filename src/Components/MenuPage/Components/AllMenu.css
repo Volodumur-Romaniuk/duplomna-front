@@ -8,6 +8,9 @@
 .all-menu .container{
     width: 90%;
 }
+.all-menu .btn{
+    display: none;
+}
 .all-menu .aboutel-title .title3{
     
     font-weight: 400;
@@ -28,7 +31,7 @@
 }
 .all-menu .container .header-menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     margin-bottom: 20px;
 }
 
@@ -57,7 +60,7 @@
 .all-menu .container .menu-grid .info-grid-menu{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     width: fit-content;
 }
 .all-menu .container .menu-grid .info-grid-menu .title2{
@@ -106,4 +109,44 @@
     z-index: 0;
     transition:none;
     box-sizing: none;
+}
+@media(max-width:426px){
+    .all-menu .container .menu-grid{
+        grid-template-columns: 1fr ;
+    }
+    .all-menu .container .menu-grid .image-grid-menu{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .aboutel-title .title2{
+        font-size: 40px !important;
+    }
+    .allpromo  .element-promo .el-price .title3{
+        font-size: 18px !important;
+    }
+    .aboutel-title .title3 {
+        font-weight: 300 !important; 
+        width: 90%;
+        font-size: 20px;
+        margin: 0 auto;
+    }
+    .all-menu .container .menu-grid .elem{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        margin-bottom: 40px;
+        border-bottom: 1px solid  #C9AB82;
+    
+    }
+    .all-menu .container .menu-grid .elem .info-grid-menu .title2{
+        margin-bottom: 15px;
+    }
+    .all-menu .container .menu-grid .elem .title3{
+        margin-bottom: 10px;
+    }
+    .allpromo .element-promo .about-book-image{
+        width: 80%;
+    }
+
 }

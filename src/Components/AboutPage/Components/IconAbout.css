@@ -32,3 +32,12 @@
     font-weight:400 ;
 text-align: center;
 }
+@media(max-width:426px){
+    .icon-about{
+        height: 160vh;
+    }
+    .icon-grid{
+        grid-gap: 80px;
+        grid-template-columns: 1fr;
+    }
+}

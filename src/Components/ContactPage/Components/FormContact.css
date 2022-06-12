@@ -64,3 +64,25 @@
 .formcontact .info-form .text-title  {
     margin-top: 30px;
 }
+@media (max-width:426px){
+    .formcontact .form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }   
+    .formcontact .form img{
+        object-fit: contain;
+       
+        width: 100%;
+       
+    }
+    .formcontact{
+        height: 100vh;
+    }
+    .formcontact  .form .info-form{
+        width: 100%;
+    }
+     
+}
