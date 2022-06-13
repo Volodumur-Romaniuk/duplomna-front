@@ -5,9 +5,9 @@ import { DatePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import moment from 'moment'
-
-
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import './BookMain.css';
+import {ClipLoader} from "react-spinners"
 import RenderButtons from './RenderButtons';
 
 function BookMain() {
@@ -22,9 +22,7 @@ function BookMain() {
     const [password,setPassword] = useState('');
     const [logicpas,setlogicPas] = useState(true);
 
-    useEffect(()=>{
-        console.log('password'+password);
-      },[password])
+   
     
 
   const setButtonID = (value) =>{
@@ -131,7 +129,8 @@ function BookMain() {
             </form>
             <div className="form-book-el">
                 <p className="title2 josefin-sans "> TIME</p>
-                    {logic ?<RenderButtons buttons = {reservation.objectbutton} onButtonClick={setButtonID} onClicksetPas={setPassword}/>:<></>}
+                    {logic ?<RenderButtons buttons = {reservation.objectbutton} Id_reserv={reservation._id} onButtonClick={setButtonID} onClicksetPas={setPassword}/>
+                        :<div className="spinner">  <ClipLoader size={150} style={{margin: "auto"}} color={"#C9AB82"}/></div>}
              </div>
             <div className="slider-buttons btn josefin-sans">
                 <button onClick={(e)=>saveDate(e)}  className="josefin-sans"> Submit</button>

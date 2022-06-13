@@ -2,10 +2,12 @@ import React,{useState,useEffect} from 'react';
 import "./BookMain.css"
 import PopupPassword from './PopupPassword';
 import ReservedPopupPassword from './ReservedPopupPassword';
-function RenderButtons({buttons,onButtonClick,onClicksetPas}) {
+function RenderButtons({buttons,onButtonClick,onClicksetPas,Id_reserv}) {
   const [popup,setPopup] = useState(false)
   const [close,setClose] = useState(true)
+  const [renderPopup,setRenderPopup] = useState(null);
   const [butons,setButons] = useState({})
+  const [idButtons,setIdButtons] = useState('')
   const [password,setPassword] = useState('');
   useEffect(()=>{
     console.log('close'+close);
@@ -14,6 +16,11 @@ function RenderButtons({buttons,onButtonClick,onClicksetPas}) {
     console.log("buttons"+popup)
      
  },[popup])
+
+ useEffect(()=>{
+  console.log("renderButtons"+renderPopup)
+   
+},[renderPopup])
 
 /* const saveDate = (e) =>{
   e.preventDefault();
@@ -42,7 +49,11 @@ function RenderButtons({buttons,onButtonClick,onClicksetPas}) {
         <>
             <button  onClick ={()=>{
               setPopup(true)
+             
               onButtonClick(element.id);
+              setIdButtons(element.id)
+              setRenderPopup(element.isReserved);
+              console.log("onclick " + element.id);
               onClicksetPas(password);
               console.log('popup'+popup);
               setButons(buttons);
@@ -54,7 +65,8 @@ function RenderButtons({buttons,onButtonClick,onClicksetPas}) {
           )}
      </>
     } 
-    {     popup ? <PopupPassword opens = {popup} onClosePopup ={setPopup} onClicksetPas ={onClicksetPas}/> : <></>
+    {     
+      renderPopup === null ? <></>: renderPopup === true ?  <ReservedPopupPassword opens = {popup} onClosePopup ={setPopup}  ID_reserv={Id_reserv} ID_Button={idButtons}  onClicksetPas ={onClicksetPas} onRenderPopup={setRenderPopup} />  :   <PopupPassword opens = {popup} onClosePopup ={setPopup} onClicksetPas ={onClicksetPas} onRenderPopup={setRenderPopup}/>
     }
 </div>
   );
