@@ -14,7 +14,7 @@
 .formcontact .form img{
     object-fit: contain;
    
-    height: 100%;
+  width: 100%;
    
 }
 .formcontact  .form .info-form{

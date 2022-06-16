@@ -26,6 +26,7 @@ export default function ReservedPopupPassword({opens,onClosePopup,onClicksetPas,
    },[checkpasword])
 
     useEffect(() =>{
+      console.log("unreserved")
       axios.get(`https://duplomna-backend.herokuapp.com/reservation/getpas/${ID_reserv}/${ID_Button}`).then(result =>{
         setCheckpassword(result.data)
         console.log(result.data)

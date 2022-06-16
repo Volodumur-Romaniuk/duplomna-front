@@ -29,6 +29,18 @@ function BookMain() {
       setButtonId(value)
       console.log(value)
   }
+
+  const sender = () =>{
+    axios.post("http://localhost:5002/reservation/sendmailRes",{
+        to:mail,
+        subject:"your reservation",
+        text:"",
+        html:"<p>lorem lorem lorem lorem lorem loremlorem</p>"
+}).then(result =>{
+        console.log('work')
+    })
+    
+  }
     const getObDate = (res) =>{
         
         let date =  Date.parse(res)
@@ -71,9 +83,9 @@ function BookMain() {
   return (
     <div className="bookmain">
         <img className="background-book" src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/booking.jpg" alt="" />
-            
+          <form  onSubmit={(e)=>{saveDate(e); sender()}}action=""> 
         <div className="form-book">
-            <form className="form-book-text">
+            <div className="form-book-text">
                     <p className="title2 josefin-sans "> BOOK</p>
                     <p className="title3  josefin-sans">
                          Pulvinar tempor diam sollicitudin gravida porttitor enim <br />
@@ -96,8 +108,8 @@ function BookMain() {
                             </select>
                             <input type = "text" onChange={(e)=>setName(e.target.value)}  placeholder="Your Name"  required/> 
                         </div>
-                        <div className="row-button   josefin-sans">
-                        <LocalizationProvider   sx = {{width:"100%"}}  dateAdapter ={AdapterDateFns} >
+                        <div className="row-button  row-button-dg josefin-sans">
+                        <LocalizationProvider   dateAdapter ={AdapterDateFns} >
                             <DatePicker      
                                  required
                                 onAccept ={(date)=>{
@@ -113,8 +125,8 @@ function BookMain() {
                                 showToolbar ={true}
                                 format="yyyy-MM-dd HH:mm:ss"
                             onChange={(date)=>{setDate(date);  console.log(date)}}
-                            sx = {{width:"100%"}} 
-                            renderInput={(params) => <TextField {...params}   sx = {{width:'100%'}}  />}
+                            
+                            renderInput={(params) => <TextField {...params}     />}
                                 />
                             </LocalizationProvider>
                           
@@ -126,19 +138,18 @@ function BookMain() {
                           
                           
                     
-            </form>
+            </div>
             <div className="form-book-el">
                 <p className="title2 josefin-sans "> TIME</p>
                     {logic ?<RenderButtons buttons = {reservation.objectbutton} Id_reserv={reservation._id} onButtonClick={setButtonID} onClicksetPas={setPassword}/>
                         :<div className="spinner">  <ClipLoader size={150} style={{margin: "auto"}} color={"#C9AB82"}/></div>}
              </div>
             <div className="slider-buttons btn josefin-sans">
-                <button onClick={(e)=>saveDate(e)}  className="josefin-sans"> Submit</button>
+                <button type="submit" className="josefin-sans"> Submit</button>
             </div>
         </div>
-             
-
         
+        </form>    
             
     
     </div>

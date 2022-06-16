@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import './PopupPassword.css';
 import Dialog from '@mui/material/Dialog';
+import { fi } from 'date-fns/locale';
 export default function PopupPassword({opens,onClosePopup,onClicksetPas,onRenderPopup}) {
     const [open,setOpen] = useState(opens)
     const [fieldpas1,setFieldpas1] = useState('')
@@ -20,17 +21,62 @@ export default function PopupPassword({opens,onClosePopup,onClicksetPas,onRender
        console.log(disable)
     },[disable])
     const checkpassword = () =>{
-        if(fieldpas1 === '' && fieldpas2 === '')
+   
+    
+      if (fieldpas1.length >=3){
+        return fieldpas1 === fieldpas2  ? 'паролі співпадають' : 'паролі не співпадають'
+      } else {
+        return 'введіть значення більше 3'
+      }
+      
+      
+      
+      
+      /*if(fieldpas1 === fieldpas2 && fieldpas1 >=3){
+        return 'паролі співпадають'
+      }  
+      
+      if(fieldpas1 === fieldpas2 && fieldpas1 < 3){
+        return 'введіть значення >3'
+      }  
+      if(fieldpas1 === fieldpas2 && fieldpas1 < 3){
+        return 'введіть значення >3'
+      }  
+      
+      if(fieldpas1 === '' && fieldpas2 === '')
+          return ''
+      */ 
+       /* if(fieldpas1 === '' && fieldpas2 === '')
             return ''
-        else return fieldpas1 === fieldpas2  ? 'паролі співпадають' : 'паролі не співпадають'
+        else if(fieldpas1 > 3){
+            
+        }
+        else return 'введіть паротль більше 3 символів'
+        */
     }
-    const checksave = (e) =>{
-         if(fieldpas1 == e ) {
-            setDisable(false);
-            console.log('gfgfdgdf')
-            setPassword(fieldpas1)
+    const checksave1 = (e) =>{
+      if (e.length >=3){
+        if(fieldpas1 == e ) {
+          setDisable(false);
+          console.log('gfgfdgdf')
+          setPassword(fieldpas1)
 
-         } else setDisable(true)
+       } else setDisable(true)
+      } else setDisable(true)
+         
+        
+    }
+
+    const checksave2 = (e) =>{
+      if (e.length >=3){
+        if(fieldpas2 == e ) {
+          setDisable(false);
+          console.log('gfgfdgdf')
+          setPassword(fieldpas1)
+
+       } else setDisable(true)
+      } else setDisable(true)
+         
         
     }
   
@@ -40,9 +86,10 @@ export default function PopupPassword({opens,onClosePopup,onClicksetPas,onRender
           <div className="popup">
             <div className="row-button   josefin-sans">
                 <input  onChange={(e)=>{
-                setFieldpas1(e.target.value);
+                setFieldpas1(e.target.value)
+                checksave2(e.target.value);
             }} type="password" required />
-                <input  onChange={(e)=>{setFieldpas2(e.target.value); console.log('work '); checksave(e.target.value)}} type="password" required />
+                <input  onChange={(e)=>{setFieldpas2(e.target.value); console.log('work '); checksave1(e.target.value)}} type="password" required />
              </div>
              <div className="text">
                  <p>{checkpassword()} </p>
