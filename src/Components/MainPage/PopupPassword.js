@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import './PopupPassword.css';
 import Dialog from '@mui/material/Dialog';
-import { fi } from 'date-fns/locale';
+
 export default function PopupPassword({opens,onClosePopup,onClicksetPas,onRenderPopup}) {
     const [open,setOpen] = useState(opens)
     const [fieldpas1,setFieldpas1] = useState('')
@@ -88,14 +88,14 @@ export default function PopupPassword({opens,onClosePopup,onClicksetPas,onRender
                 <input  onChange={(e)=>{
                 setFieldpas1(e.target.value)
                 checksave2(e.target.value);
-            }} type="password" required />
-                <input  onChange={(e)=>{setFieldpas2(e.target.value); console.log('work '); checksave1(e.target.value)}} type="password" required />
+            }}  minLength="3" type="password" required />
+                <input  onChange={(e)=>{setFieldpas2(e.target.value); console.log('work '); checksave1(e.target.value)}} type="password" minLength="3" required />
              </div>
              <div className="text">
                  <p>{checkpassword()} </p>
              </div>
              <div className="slider-buttons btn josefin-sans">
-                <button  onClick={()=>{onClicksetPas(password); handleClose();}}  className="josefin-sans" disabled={disable} > Submit</button>
+                <button  onClick={()=>{onClicksetPas(password); handleClose();}}  className="josefin-sans"  disabled={disable} > Submit</button>
             </div>
           </div>
         </Dialog>

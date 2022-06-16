@@ -108,7 +108,9 @@
     width: 100% !important;
 }
 .row-button .MuiFormControl-root .MuiInputAdornment-root{
-    display: none;
+    background: blanchedalmond;
+    height: 35px;
+    width: 35px;
 }
 .row-button input::placeholder{
     text-align: left;
