@@ -173,10 +173,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{
         height: 10%;
     }
     .row-button{
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
     .row-button input{
         margin:  0 auto 10px !important;
@@ -192,4 +192,11 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     .form-book-el button{
         padding: 10px;
     }
-}
+    
+   .row-button-dg  input{
+        width: 50% !important;
+    }
+    .row-button-dg .MuiFormControl-root input{
+        width: 50% !important;
+    }
+} 

@@ -26,9 +26,17 @@
     opacity:0.9;
   
 }
+.formcontact .info-form .elements-form .slider-buttons{
+    width: 100%;
+    height: 100%;
+}
+.formcontact .info-form .elements-form .slider-buttons button{
+    margin:0;
+}
 .formcontact .info-form .elements-form{
     margin-left: 50px;
     width: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }

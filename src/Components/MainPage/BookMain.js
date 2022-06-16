@@ -35,8 +35,8 @@ function BookMain() {
         to:mail,
         subject:"your reservation",
         text:"",
-        html:"<p>lorem lorem lorem lorem lorem loremlorem</p>"
-}).then(result =>{
+        html:"<p>Дякую за ваше замовлення!!!</p>"
+        }).then(result =>{
         console.log('work')
     })
     
