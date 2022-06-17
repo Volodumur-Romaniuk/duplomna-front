@@ -1,6 +1,25 @@
 import './FormContact.css'
+import React ,{ useState, useEffect } from 'react';
+import axios from 'axios';
 
 function FormContant(){
+    const [name,setName] = useState('');
+    const [email,setEmail] = useState('');
+    const [comment,setComment] = useState('');
+
+
+    const sender = (e) =>{
+        e.preventDefault();
+        axios.post("https://duplomna-backend.herokuapp.com/reservation/sendmailRes",{
+            to:"romaniuk.volodymyr.clg@chnu.edu.ua",
+            subject:"your feedback",
+            text:`${name} ${email} ${comment}`,
+            html:"<p>Дякую за ваш фідбек</p>"
+            }).then(result =>{
+            console.log('work')
+        })
+        
+      }
     return (
         <div className="formcontact">
             <div className="form">
@@ -14,17 +33,18 @@ function FormContant(){
                                 onlineorder@cosushi.com | info@cosushi.com 
                         </p>
                     </div>
+                    <form onSubmit={(e)=>sender(e)}  action="" >
                     <div className="row-button   josefin-sans">
-                            <input  placeholder="Your Name *"  type="text" required/>
-                            <input placeholder="Your Email *"  type="text"required/>
-                            <input placeholder="Your Commnent *"  type="text"required/>
+                            <input  placeholder="Your Name *"  onChange={(e)=>setName(e.target.value)} type="text" required/>
+                            <input placeholder="Your Email *"  onChange={(e)=>setEmail(e.target.value)} type="email"required/>
+                            <input placeholder="Your Commnent *"  onChange={(e)=>setComment(e.target.value)} type="text"required/>
 
                             <div className="slider-buttons btn josefin-sans">
                              
-                                <button className="josefin-sans"> Send Message</button>
+                                <button type="submit" className="josefin-sans"> Send Message</button>
                             </div>
                         </div>
-
+                    </form>
                     </div>
                     
                 </div>
