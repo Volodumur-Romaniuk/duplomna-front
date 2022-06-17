@@ -49,7 +49,6 @@ function RenderButtons({buttons,onButtonClick,onClicksetPas,Id_reserv}) {
         <>
             <button  onClick ={()=>{
               setPopup(true)
-             
               onButtonClick(element.id);
               setIdButtons(element.id)
               setRenderPopup(element.isReserved);
@@ -58,7 +57,7 @@ function RenderButtons({buttons,onButtonClick,onClicksetPas,Id_reserv}) {
               console.log('popup'+popup);
               setButons(buttons);
             }}  
-            id={element.id}  className={element.isReserved ? 'reserved-button': ""} >
+            id={element.id}  type="button" className={element.isReserved ? 'reserved-button': ""} >
             {array[index]}
           </button>
           </>
