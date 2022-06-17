@@ -73,6 +73,8 @@ function BookMain() {
             password:password}).then(result =>{
             console.log('worksave')
             console.log(result.data)
+           
+          
 
         })
         
@@ -86,7 +88,7 @@ function BookMain() {
   return (
     <div className="bookmain">
         <img className="background-book" src="https://alethemes.com/alesushi/wp-content/uploads/sites/105/2021/12/booking.jpg" alt="" />
-          <form  onSubmit={(e)=>{saveDate(e); sender()}}action=""> 
+          <form  onSubmit={(e)=>{ sender(); saveDate(e); }}  action=""> 
         <div className="form-book">
             <div className="form-book-text">
                     <p className="title2 josefin-sans "> BOOK</p>
