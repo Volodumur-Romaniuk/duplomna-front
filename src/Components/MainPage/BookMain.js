@@ -29,9 +29,12 @@ function BookMain() {
       setButtonId(value)
       console.log(value)
   }
+  useEffect(()=>{
+    console.log("mail"+mail)
+  },[mail])
 
   const sender = () =>{
-    axios.post("http://localhost:5002/reservation/sendmailRes",{
+    axios.post("https://duplomna-backend.herokuapp.com/reservation/sendmailRes",{
         to:mail,
         subject:"your reservation",
         text:"",
